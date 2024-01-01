@@ -21,8 +21,7 @@ class AuthService extends ChangeNotifier {
       _fireStore.collection('user').doc(userCredential.user!.uid).set({
         'uid': userCredential.user!.uid,
         'email': email,
-        
-      },SetOptions(merge: true));
+      }, SetOptions(merge: true));
 
       return userCredential;
     }
@@ -34,7 +33,7 @@ class AuthService extends ChangeNotifier {
 
   //create a new user
   Future<UserCredential> signUpWithEmailandPassword(
-      String email, String password) async {
+      String email, String password, String firstName, String lastName) async {
     try {
       //sign in
       UserCredential userCredential =
@@ -47,6 +46,8 @@ class AuthService extends ChangeNotifier {
       _fireStore.collection('user').doc(userCredential.user!.uid).set({
         'uid': userCredential.user!.uid,
         'email': email,
+        'first_name':firstName,
+        'last_name':lastName,
         //'password': password,
       });
 

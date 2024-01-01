@@ -1,4 +1,4 @@
-import 'package:chat_firebase/services/auth/auth_service.dart';
+/* import 'package:chat_firebase/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -14,8 +14,6 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
-  final firstNameController = TextEditingController();
-  final lastNameController = TextEditingController();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   final confirmPasswordController = TextEditingController();
@@ -37,8 +35,6 @@ class _RegisterPageState extends State<RegisterPage> {
       await authService.signUpWithEmailandPassword(
         emailController.text,
         passwordController.text,
-        firstNameController.text,
-        lastNameController.text,
       );
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -77,20 +73,6 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
               ),
               const SizedBox(height: 25),
-              //first name textfield
-              MyTextField(
-                controller: firstNameController,
-                hintText: "First Name",
-                obscureText: false,
-              ),
-              const SizedBox(height: 10),
-              //lastname textfield
-              MyTextField(
-                controller: lastNameController,
-                hintText: "Last Name",
-                obscureText: false,
-              ),
-              const SizedBox(height: 10),
               //email textfield
               MyTextField(
                 controller: emailController,
@@ -142,3 +124,4 @@ class _RegisterPageState extends State<RegisterPage> {
     );
   }
 }
+ */

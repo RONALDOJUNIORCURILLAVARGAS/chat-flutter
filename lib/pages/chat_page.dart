@@ -8,10 +8,12 @@ import 'package:flutter/material.dart';
 class ChatPage extends StatefulWidget {
   final String reciveUserEmail;
   final String reciveUserID;
+  final String receiveUserName;
   const ChatPage({
     super.key,
     required this.reciveUserEmail,
     required this.reciveUserID,
+    required this.receiveUserName,
   });
 
   @override
@@ -37,7 +39,7 @@ class _ChatPageState extends State<ChatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.reciveUserEmail),
+        title: Text(widget.receiveUserName),
       ),
       body: Column(
         children: [
@@ -99,7 +101,7 @@ class _ChatPageState extends State<ChatPage> {
                   ? MainAxisAlignment.end
                   : MainAxisAlignment.start,
           children: [
-            Text(data['senderEmail']),
+           // Text(data['senderEmail']),
             const SizedBox(
               height: 5,
             ),
